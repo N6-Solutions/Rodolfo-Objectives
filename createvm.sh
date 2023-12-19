@@ -12,7 +12,7 @@ if [ "$VM_CHOICE" == "1" ]; then
     OS_TYPE="Windows10_64"
 elif [ "$VM_CHOICE" == "2" ]; then
     VM_NAME="WindowsServer2019VM"
-    ISO_PATH="/home/rcode/Downloads/wserver2019.iso" # Windows Server 2019 ISO path
+    ISO_PATH="/home/rcode/Downloads/UnServ2019Install.iso" # Windows Server 2019 ISO path
     OS_TYPE="Windows2019_64"
 else
     echo "Invalid choice. Exiting."
