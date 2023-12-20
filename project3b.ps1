@@ -27,45 +27,57 @@ function Create-OrganizationalUnit {
 # Function to create a new user in the specified OU
 function Create-NewUser {
     param (
-        [string]$UserName,
-        [string]$OUName
+        [string]$FullName,
+        [string]$UserLogon,
+        [string]$Department
     )
     Try {
         $userParams = @{
-            SamAccountName = $UserName
-            UserPrincipalName = "$UserName@$DomainName"
-            Name = $UserName
-            GivenName = $UserName.Split(' ')[1]
-            Surname = $UserName.Split(' ')[0]
-            Path = "OU=$OUName,DC=$(($DomainName -split '\.')[0]),DC=$(($DomainName -split '\.')[1])"
+            SamAccountName = $UserLogon.Split('@')[0]
+            UserPrincipalName = $UserLogon
+            Name = $FullName
+            GivenName = $FullName.Split(' ')[0]
+            Surname = $FullName.Split(' ')[1]
+            Path = "OU=$Department,DC=$(($DomainName -split '\.')[0]),DC=$(($DomainName -split '\.')[1])"
             AccountPassword = $defaultPassword
             Enabled = $true
             PasswordNeverExpires = $true
             ChangePasswordAtLogon = $false
         }
         New-ADUser @userParams
-        Write-Host "User '$UserName' created successfully in OU '$OUName'." -ForegroundColor Green
+        Write-Host "User '$FullName' created successfully in OU '$Department'." -ForegroundColor Green
     }
     Catch {
-        Write-Warning -Message "Failed to create new user '$UserName'. Error: $_.Exception.Message"
+        Write-Warning -Message "Failed to create new user '$FullName'. Error: $_.Exception.Message"
     }
 }
 
 # Main script execution
 
-# Create OUs
-$ouNames = @('OU1', 'OU2', 'OU3')
-foreach ($ou in $ouNames) {
-    Create-OrganizationalUnit -OUName $ou
+# Define departments and their users
+$departments = @{
+    'Sales and Marketing' = @(
+        @{ FullName = 'James Smith'; UserLogon = 'JamSmith@MysticTechnologies.com' },
+        @{ FullName = 'Jennifer Demark'; UserLogon = 'JenDem@MysticTechnologies.com' },
+        @{ FullName = 'Alex Woodall'; UserLogon = 'AlWoodall@MysticTechnologies.com' }
+    )
+    'Research and Development' = @(
+        @{ FullName = 'Robert Gray'; UserLogon = 'RobGray@MysticTechnologies.com' },
+        @{ FullName = 'Susan Remos'; UserLogon = 'SusRemos@MysticTechnologies.com' }
+    )
+    'Future Expansion' = @(
+        @{ FullName = 'William King'; UserLogon = 'WilKing@MysticTechnologies.com' },
+        @{ FullName = 'Ashley'; UserLogon = 'AshBindes@MysticTechnologies.com' }
+    )
+    'Management' = @(
+        @{ FullName = 'Juan Cruz'; UserLogon = 'JCruz@MysticTechnologies.com' }
+    )
 }
 
-# Create users
-$userDetails = @{
-    'Alpha One' = 'OU1';
-    'Bravo Two' = 'OU2';
-    'Charlie Three' = 'OU3'
-}
-
-foreach ($user in $userDetails.GetEnumerator()) {
-    Create-NewUser -UserName $user.Name -OUName $user.Value
+# Create OUs and Users
+foreach ($department in $departments.Keys) {
+    Create-OrganizationalUnit -OUName $department
+    foreach ($user in $departments[$department]) {
+        Create-NewUser -FullName $user.FullName -UserLogon $user.UserLogon -Department $department
+    }
 }
