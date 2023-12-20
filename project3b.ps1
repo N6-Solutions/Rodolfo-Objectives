@@ -67,7 +67,7 @@ $departments = @{
     )
     'Future Expansion' = @(
         @{ FullName = 'William King'; UserLogon = 'WilKing@MysticTechnologies.com' },
-        @{ FullName = 'Ashley'; UserLogon = 'AshBindes@MysticTechnologies.com' }
+        @{ FullName = 'Ashley Beket'; UserLogon = 'AshBindes@MysticTechnologies.com' }
     )
     'Management' = @(
         @{ FullName = 'Juan Cruz'; UserLogon = 'JCruz@MysticTechnologies.com' }

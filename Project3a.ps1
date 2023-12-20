@@ -8,7 +8,7 @@
 #- Variables -                                         -
 
 # Network Variables
-$ethalias = 'Ethernet0'
+$ethalias = 'Ethernet'
 $ethipaddress = '192.168.11.7'
 $ethprefixlength = '24'
 $ethdefaultgw = '192.168.11.1'
