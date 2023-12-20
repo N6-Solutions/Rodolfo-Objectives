@@ -1,4 +1,7 @@
 #!/bin/bash
+# Author         Rodolfo Gonzalez
+# Date:         12-19-2023
+# Purpose:      To automate creation of Windows 10 VM's or Server 2019, from a linux environment.
 
 # Ask user to choose the type of VM to create
 echo "Select the type of VM to create:"
