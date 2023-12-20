@@ -17,10 +17,11 @@ Minimum operations this script should perform:
 - Create an AD Forest, Organizational Units (OU), and users.
 - Configure the server to act as both a DNS server and a Domain Controller.
 - Integrate the new server into the existing network infrastructure.
+---------------------------------------------------------------------------------
 
 ## This Bash script automates the creation of Windows 10 or Windows Server 2019 virtual machines (VMs) from a Linux environment using Oracle VirtualBox. Here's a summary of what happens in the code:
 
--The script starts by presenting the user with a choice to create either a -Windows 10 VM or a Windows Server 2019 VM by asking for input (1 or 2).
+The script starts by presenting the user with a choice to create either a -Windows 10 VM or a Windows Server 2019 VM by asking for input (1 or 2).
 -Depending on the user's choice, it sets some variables, including the VM name, the path to the ISO file for the chosen Windows version, and the OS type.
 -The user is then prompted to enter a name for the VM.
 -Several configuration variables are set, including the VM directory, HDD size, RAM size, and CPU count.
@@ -30,22 +31,22 @@ Minimum operations this script should perform:
 -Network settings are configured to connect the VM to an internal network.
 -The VM is started with a GUI using VBoxManage startvm.
 
--After the VM is successfully started, the script asks the user if they want to delete the VM. If the user confirms, the script powers off the VM, deletes it, and confirms the -deletion. If the user chooses not to delete the VM, it indicates that the VM was not deleted.
--[Bash Create a VM] (https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/createvm.sh)
+After the VM is successfully started, the script asks the user if they want to delete the VM. If the user confirms, the script powers off the VM, deletes it, and confirms the -deletion. If the user chooses not to delete the VM, it indicates that the VM was not deleted.    
+-[Bash Create a VM](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/createvm.sh)
 
 ## Scripts Overview
 
 1. **Project3print.ps1**
    - **Description:** This script is used to print the current system and network configuration of the Windows Server. It's designed to be run both before and after the execution of the other two scripts to capture and compare the system's state, allowing for verification of changes made during the setup process.
-   - [GitHub Link](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3print.ps1)
+   - [Project3print.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3print.ps1)
 
 2. **Project3a.ps1**
    - **Description:** `Project3a.ps1` is responsible for the initial setup of the Windows Server. This includes configuring network settings (such as setting a static IP address and DNS), renaming the server, installing Active Directory Domain Services, and setting up the server as a Domain Controller.
-   - [GitHub Link](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3a.ps1)
+   - [Project3a.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3a.ps1)
 
 3. **Project3b.ps1**
    - **Description:** The `Project3b.ps1` script is focused on further configuring Active Directory. It involves creating specific Organizational Units (OUs) and user accounts within those OUs. Each user is assigned to an OU based on their department, and account properties like usernames, logon names, and passwords are set.
-   - [GitHub Link](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/project3b.ps1)
+   - [Project3b.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/project3b.ps1)
 
 ## Execution Order
 
