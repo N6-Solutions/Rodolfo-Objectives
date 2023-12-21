@@ -40,7 +40,7 @@ After the VM is successfully started, the script asks the user if they want to d
 
 1. **Project3print.ps1**
    - **Description:** This script is used to print the current system and network configuration of the Windows Server. It's designed to be run both before and after the execution of the other two scripts to capture and compare the system's state, allowing for verification of changes made during the setup process.
-   - [P3-1.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3print.ps1)
+   - [p3-1.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3print.ps1)
 
 2. **Project3a.ps1**
    - **Description:** `Project3a.ps1` is responsible for the initial setup of the Windows Server. This includes configuring network settings (such as setting a static IP address and DNS), renaming the server, installing Active Directory Domain Services, and setting up the server as a Domain Controller.
