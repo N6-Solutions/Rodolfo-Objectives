@@ -40,24 +40,24 @@ After the VM is successfully started, the script asks the user if they want to d
 
 1. **Project3print.ps1**
    - **Description:** This script is used to print the current system and network configuration of the Windows Server. It's designed to be run both before and after the execution of the other two scripts to capture and compare the system's state, allowing for verification of changes made during the setup process.
-   - [Project3print.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3print.ps1)
+   - [P3-1.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3print.ps1)
 
 2. **Project3a.ps1**
    - **Description:** `Project3a.ps1` is responsible for the initial setup of the Windows Server. This includes configuring network settings (such as setting a static IP address and DNS), renaming the server, installing Active Directory Domain Services, and setting up the server as a Domain Controller.
-   - [Project3a.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3a.ps1)
+   - [p3-2.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/Project3a.ps1)
 
 3. **Project3b.ps1**
    - **Description:** The `Project3b.ps1` script is focused on further configuring Active Directory. It involves creating specific Organizational Units (OUs) and user accounts within those OUs. Each user is assigned to an OU based on their department, and account properties like usernames, logon names, and passwords are set.
-   - [Project3b.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/project3b.ps1)
+   - [p3-3.ps1](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/project3b.ps1)
 
 ## Execution Order
 
 Follow these steps to deploy the Windows Server:
 
-1. Run `Project3print.ps1` to document the server's initial state.
-2. Execute `Project3a.ps1` for basic server and Active Directory setup.
-3. Follow with `Project3b.ps1` for detailed Active Directory configurations.
-4. Finally, run `Project3print.ps1` again to verify the changes.
+1. Run `p3-1.ps1` to document the server's initial state.
+2. Execute `p3-2.ps1` for basic server and Active Directory setup.
+3. Follow with `p3-3.ps1` for detailed Active Directory configurations.
+4. Finally, run `p3-1.ps1` again to verify the changes.
 
 ## Resources
 
