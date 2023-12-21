@@ -19,7 +19,7 @@ Minimum operations this script should perform:
 - Integrate the new server into the existing network infrastructure.
 ---------------------------------------------------------------------------------
 ### N6 Solutions OS Version Control Standard Operating Procedure
--[]
+-[OS Version Control SOP](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/OS_Version_ControlSOP.md)
 
 ## This Bash script automates the creation of Windows 10 or Windows Server 2019 virtual machines (VMs) from a Linux environment using Oracle VirtualBox. Here's a summary of what happens in the code:
 
