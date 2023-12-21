@@ -7,6 +7,9 @@
 
 #- Variables -                                         -
 
+# Execution policy need to be changed or your script wont run.
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
 # Network Variables
 $ethalias = 'Ethernet'
 $ethipaddress = '192.168.11.7'

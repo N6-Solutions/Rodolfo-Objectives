@@ -3,11 +3,12 @@
 # Date of latest revision:      12/20/2023
 # This cript displays the changes made by the other two scripts.
 
+# You need to change permissions to allow you to make changes.
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
 # Check the current computer name
 Write-Host "Current Computer Name: $($env:COMPUTERNAME)"
 Write-Host ""
-
-
 
 # Domain Controller status
 Write-Host "Domain Controller Status:"
