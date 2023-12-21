@@ -19,7 +19,7 @@ Minimum operations this script should perform:
 - Integrate the new server into the existing network infrastructure.
 ---------------------------------------------------------------------------------
 ### N6 Solutions OS Version Control Standard Operating Procedure
--[OS Version Control SOP](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/OS_Version_ControlSOP.md)
+[OS Version Control SOP](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/OS_Version_ControlSOP.md)
 
 ## This Bash script automates the creation of Windows 10 or Windows Server 2019 virtual machines (VMs) from a Linux environment using Oracle VirtualBox. Here's a summary of what happens in the code:
 
@@ -34,7 +34,7 @@ The script starts by presenting the user with a choice to create either a -Windo
 -The VM is started with a GUI using VBoxManage startvm.
 
 After the VM is successfully started, the script asks the user if they want to delete the VM. If the user confirms, the script powers off the VM, deletes it, and confirms the -deletion. If the user chooses not to delete the VM, it indicates that the VM was not deleted.    
--[Bash Create a VM](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/createvm.sh)
+[Bash Create a VM](https://github.com/N6-Solutions/Rodolfo-Objectives/blob/main/createvm.sh)
 
 ## Scripts Overview
 
