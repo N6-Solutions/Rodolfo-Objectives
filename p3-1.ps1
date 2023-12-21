@@ -1,14 +1,16 @@
 # Script Name:                  PS
 # Author:                       Rodolfo Gonzalez
 # Date of latest revision:      12/20/2023
-# This cript displays the changes made by the other two scripts.
+# Script 1:                     This cript displays the changes made by the other two scripts.
 
-# You need to change permissions to allow you to make changes.
+# Execution policy must be changed or the script will not work.
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 
 # Check the current computer name
 Write-Host "Current Computer Name: $($env:COMPUTERNAME)"
 Write-Host ""
+
+
 
 # Domain Controller status
 Write-Host "Domain Controller Status:"
@@ -35,5 +37,4 @@ Write-Host "List of AD Users:"
 Get-ADUser -Filter * -Properties * | Format-Table Name, UserPrincipalName, Enabled, PasswordNeverExpires, PasswordLastSet, DistinguishedName -AutoSize
 
 
-  
   

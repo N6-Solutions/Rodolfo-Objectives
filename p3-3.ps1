@@ -1,14 +1,14 @@
 # Script Name:                  PS
 # Author:                       Rodolfo Gonzalez
 # Date of latest revision:      12/20/2023
-# Script 2:                     
-
-# Execution policy need to be changed or your script wont run.
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+# Script 3:                     Creates OU's and User accounts.
 
 param (
     [string]$DomainName = 'MysticTechnologies.com'
 )
+
+# Execution policy must be changed or the script will not work.
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process 
 
 # Default password for user accounts
 $defaultPassword = ConvertTo-SecureString -AsPlainText 'Password123' -Force
@@ -84,3 +84,5 @@ foreach ($department in $departments.Keys) {
         Create-NewUser -FullName $user.FullName -UserLogon $user.UserLogon -Department $department
     }
 }
+
+  
