@@ -68,3 +68,4 @@ Here are some additional resources to help you with Windows Server deployment an
 - [Microsoft Docs: Introduction to Active Directory Administrative Center (ADAC) Enhancements](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-)
 - [OpenAI Community Chat: Windows Server Deployment Discussion](https://chat.openai.com/share/0640ed33-2e71-4fe3-a351-0a4faeacd9cf)
 - [Loggo courtesy of Looke](https://looka.com/editor/163211536)
+- [Join Windows to a Domain](https://www.itechguides.com/join-windows-10-to-domain/)
